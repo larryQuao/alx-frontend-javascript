@@ -2,6 +2,10 @@ interface Directors extends Teacher {
     readonly numberOfReports: number;
 }
 
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
 interface Teacher {
     readonly firstName: string;
     readonly lastName: string;
@@ -30,3 +34,11 @@ const director1: Directors = {
 
 console.log(typeof teacher1, teacher1);
 console.log(typeof director1, director1);
+
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+    return `${firstName.charAt(0)}.${lastName}`;
+}
+
+// function printTeacher(firstName: string, lastName: string): string {
+//     return `${firstName.charAt(0)}.${lastName}`;
+// };
