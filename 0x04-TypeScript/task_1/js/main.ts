@@ -1,3 +1,7 @@
+interface Directors extends Teacher {
+    readonly numberOfReports: number;
+}
+
 interface Teacher {
     readonly firstName: string;
     readonly lastName: string;
@@ -7,9 +11,6 @@ interface Teacher {
     [key: string]: any;
 }
 
-interface Directors extends Teacher {
-    readonly numberOfReports: number;
-}
 
 const teacher1: Teacher = {
     firstName: "Joel",
