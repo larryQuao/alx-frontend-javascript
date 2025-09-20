@@ -35,3 +35,14 @@ var getCoffeeBreak = function (teacher) {
 var workTeacherTasks = function (teacher) {
     return "Getting to work";
 };
+function createEmployee(salary) {
+    if (typeof salary === 'number' && salary < 500) {
+        return new Teacher();
+    }
+    else {
+        return new Director();
+    }
+}
+console.log(createEmployee(200));
+console.log(createEmployee(1000));
+console.log(createEmployee('$500'));

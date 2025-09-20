@@ -46,3 +46,15 @@ const workTeacherTasks = (teacher: Teacher): string => {
     return `Getting to work`;
 }
 
+function createEmployee(salary: number | string) {
+    if (typeof salary === 'number' && salary < 500) {
+        return new Teacher();
+    }
+    else {
+        return new Director();
+    }
+}
+
+console.log(createEmployee(200));
+console.log(createEmployee(1000));
+console.log(createEmployee('$500')); 
