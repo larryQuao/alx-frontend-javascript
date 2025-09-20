@@ -1,3 +1,16 @@
+var StudentClass = /** @class */ (function () {
+    function StudentClass(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    StudentClass.prototype.workOnHomework = function () {
+        return "Currently working";
+    };
+    StudentClass.prototype.displayName = function () {
+        return this.firstName;
+    };
+    return StudentClass;
+}());
 var teacher1 = {
     firstName: "Joel",
     lastName: "Asumani",
@@ -22,3 +35,6 @@ var printTeacher = function (firstName, lastName) {
 // };
 console.log(printTeacher("John", "Doe")); // Output: J.Doe
 console.log(printTeacher("Jane", "Smith")); // Output: J.Smith
+var student = new StudentClass("John", "Doe");
+console.log(student.workOnHomework()); // Output: Currently working
+console.log(student.displayName()); // Output: John
