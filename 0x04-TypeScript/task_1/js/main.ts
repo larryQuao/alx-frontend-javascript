@@ -71,17 +71,13 @@ const director1: Director = {
 console.log(typeof teacher1, teacher1);
 console.log(typeof director1, director1);
 
-const printTeacher: printTeacherFunction = (firstName, lastName): string => {
-    return `${firstName}.${lastName}`;
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+    return `${firstName}. ${lastName}`;
 }
 
-// function printTeacher(firstName: string, lastName: string): string {
-//     return `${firstName.charAt(0)}.${lastName}`;
-// };
-
-console.log(printTeacher("John", "Doe"));  // Output: J.Doe
-console.log(printTeacher("Jane", "Smith")); // Output: J.Smith
+console.log(printTeacher("John", "Doe"));
+console.log(printTeacher("Jane", "Smith"));
 
 const student = new StudentClass("John", "Doe");
-console.log(student.workOnHomework()); // Output: Currently working
-console.log(student.displayName());    // Output: John
+console.log(student.workOnHomework());
+console.log(student.displayName());
