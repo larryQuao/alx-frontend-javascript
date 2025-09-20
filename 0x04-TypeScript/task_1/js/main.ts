@@ -71,7 +71,7 @@ const director1: Director = {
 console.log(typeof teacher1, teacher1);
 console.log(typeof director1, director1);
 
-function printTeacher (firstName: string, lastName: string): string {
+function printTeacher(firstName: string, lastName: string): string {
     return `${firstName}. ${lastName}`;
 }
 
