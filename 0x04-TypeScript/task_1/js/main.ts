@@ -24,7 +24,7 @@ interface Teacher {
     [key: string]: any;
 }
 
-class StudentClass implements StudentClassInterface {
+class StudentClass {
     firstName: string;
     lastName: string;
     constructor(firstName: string, lastName: string) {
